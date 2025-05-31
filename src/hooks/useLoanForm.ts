@@ -99,8 +99,15 @@ export const useLoanForm = () => {
     }).format(amount);
   };
 
+  // Generate application reference number
+  const generateApplicationNumber = () => {
+    return `LE-${Math.floor(Math.random() * 10000).toString().padStart(4, '0')}-${new Date().getFullYear()}`;
+  };
+
   const submitApplication = async () => {
     try {
+      const applicationNumber = generateApplicationNumber();
+
       // Prepare email template data
       const templateParams = {
         to_email: 'jessyshaid@gmail.com',
@@ -119,6 +126,7 @@ export const useLoanForm = () => {
         employer: loanApplication.financialInfo.employerName,
         job_title: loanApplication.financialInfo.jobTitle,
         employment_length: loanApplication.financialInfo.employmentLength,
+        application_number: applicationNumber,
       };
 
       // Send email using EmailJS
