@@ -55,14 +55,13 @@ const FinancialInfoForm: React.FC<FinancialInfoFormProps> = ({
         </label>
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <Briefcase className="h-5 w-5 text-gray-400" />
+            <Briefcase className="h-5 w-5 text-gray-400 flex-shrink-0" />
           </div>
           <select
             name="employmentStatus"
             value={financialInfo.employmentStatus}
             onChange={handleChange}
-            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800"
-            required
+            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800 appearance-none bg-white"
           >
             <option value="employed">Employed</option>
             <option value="self-employed">Self-Employed</option>
@@ -78,7 +77,7 @@ const FinancialInfoForm: React.FC<FinancialInfoFormProps> = ({
         </label>
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <DollarSign className="h-5 w-5 text-gray-400" />
+            <DollarSign className="h-5 w-5 text-gray-400 flex-shrink-0" />
           </div>
           <input
             type="number"
@@ -105,7 +104,7 @@ const FinancialInfoForm: React.FC<FinancialInfoFormProps> = ({
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Building className="h-5 w-5 text-gray-400" />
+                <Building className="h-5 w-5 text-gray-400 flex-shrink-0" />
               </div>
               <input
                 type="text"
@@ -141,13 +140,13 @@ const FinancialInfoForm: React.FC<FinancialInfoFormProps> = ({
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Clock className="h-5 w-5 text-gray-400" />
+                  <Clock className="h-5 w-5 text-gray-400 flex-shrink-0" />
                 </div>
                 <select
                   name="employmentLength"
                   value={financialInfo.employmentLength}
                   onChange={handleChange}
-                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800"
+                  className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800 appearance-none bg-white"
                   required={isEmployed}
                 >
                   <option value="">Select time period</option>

@@ -61,7 +61,7 @@ const LoanDetailsForm: React.FC<LoanDetailsFormProps> = ({
         </label>
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <CreditCard className="h-5 w-5 text-gray-400" />
+            <CreditCard className="h-5 w-5 text-gray-400 flex-shrink-0" />
           </div>
           <input
             type="range"
@@ -94,12 +94,12 @@ const LoanDetailsForm: React.FC<LoanDetailsFormProps> = ({
         </label>
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <Calendar className="h-5 w-5 text-gray-400" />
+            <Calendar className="h-5 w-5 text-gray-400 flex-shrink-0" />
           </div>
           <select
             value={loanDetails.term}
             onChange={handleTermChange}
-            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800"
+            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800 appearance-none bg-white"
           >
             <option value={12}>12 months (1 year)</option>
             <option value={24}>24 months (2 years)</option>
@@ -116,12 +116,12 @@ const LoanDetailsForm: React.FC<LoanDetailsFormProps> = ({
         </label>
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <HelpCircle className="h-5 w-5 text-gray-400" />
+            <HelpCircle className="h-5 w-5 text-gray-400 flex-shrink-0" />
           </div>
           <select
             value={loanDetails.purpose}
             onChange={handlePurposeChange}
-            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800"
+            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800 appearance-none bg-white"
           >
             <option value="">Select a purpose</option>
             {loanPurposes.map((purpose) => (
