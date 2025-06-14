@@ -153,7 +153,7 @@ function App() {
             <p className="mt-2">
               <a href="/terms" className="text-blue-800 hover:underline mx-2">Terms of Service</a>
               <a href="/privacy" className="text-blue-800 hover:underline mx-2">Privacy Policy</a>
-              <a href="#" className="text-blue-800 hover:underline mx-2">Contact Us</a>
+              <a href="mailto:info@legacycapital.group" className="text-blue-800 hover:underline mx-2">Contact Us</a>
             </p>
           </div>
         </div>

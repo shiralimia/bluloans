@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Mail, Phone } from 'lucide-react';
 
 const PrivacyPolicyPage: React.FC = () => {
   return (
@@ -104,11 +105,22 @@ const PrivacyPolicyPage: React.FC = () => {
               <p className="text-gray-600 mb-4">
                 If you have questions about this Privacy Policy or our data practices, please contact us:
               </p>
-              <p className="text-gray-600">
-                Phone: (818) 806-9181<br />
-                Email: privacy@loanease.com<br />
-                Address: LoanEase Privacy Office, [Your Address]
-              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mb-4">
+                <a 
+                  href="tel:818-806-9181"
+                  className="flex items-center text-blue-800 hover:text-blue-600 transition-colors"
+                >
+                  <Phone className="h-5 w-5 mr-2" />
+                  (818) 806-9181
+                </a>
+                <a 
+                  href="mailto:info@legacycapital.group"
+                  className="flex items-center text-blue-800 hover:text-blue-600 transition-colors"
+                >
+                  <Mail className="h-5 w-5 mr-2" />
+                  info@legacycapital.group
+                </a>
+              </div>
             </section>
           </div>
 

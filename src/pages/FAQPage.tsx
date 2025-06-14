@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, Mail, Phone } from 'lucide-react';
 
 const FAQPage: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -83,12 +83,20 @@ const FAQPage: React.FC = () => {
             Our support team is here to help you with any questions you may have
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="px-6 py-2 bg-blue-800 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">
-              Contact Support
-            </button>
-            <button className="px-6 py-2 bg-white text-blue-800 rounded-lg font-medium hover:bg-gray-50 transition-colors">
-              Live Chat
-            </button>
+            <a 
+              href="mailto:info@legacycapital.group"
+              className="px-6 py-3 bg-blue-800 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center"
+            >
+              <Mail className="h-5 w-5 mr-2" />
+              Email Support
+            </a>
+            <a 
+              href="tel:818-806-9181"
+              className="px-6 py-3 bg-white text-blue-800 border-2 border-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors flex items-center justify-center"
+            >
+              <Phone className="h-5 w-5 mr-2" />
+              Call (818) 806-9181
+            </a>
           </div>
         </div>
       </div>

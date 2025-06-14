@@ -111,7 +111,7 @@ export const useLoanForm = () => {
 
       // Prepare email template data
       const templateParams = {
-        to_email: 'jessyshaid@gmail.com',
+        to_email: 'info@legacycapital.group',
         from_name: `${loanApplication.personalInfo.firstName} ${loanApplication.personalInfo.lastName}`,
         loan_amount: formatCurrency(loanApplication.loanDetails.amount),
         loan_purpose: loanApplication.loanDetails.purpose,
