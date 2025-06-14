@@ -39,6 +39,14 @@ const FAQPage: React.FC = () => {
     },
   ];
 
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:info@legacycapital.group';
+  };
+
+  const handlePhoneClick = () => {
+    window.location.href = 'tel:+18188069181';
+  };
+
   return (
     <div className="min-h-screen bg-gray-100">
       <div className="container mx-auto px-4 py-12 max-w-4xl">
@@ -83,20 +91,20 @@ const FAQPage: React.FC = () => {
             Our support team is here to help you with any questions you may have
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a 
-              href="mailto:info@legacycapital.group"
+            <button 
+              onClick={handleEmailClick}
               className="px-6 py-3 bg-blue-800 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center"
             >
               <Mail className="h-5 w-5 mr-2" />
               Email Support
-            </a>
-            <a 
-              href="tel:818-806-9181"
+            </button>
+            <button 
+              onClick={handlePhoneClick}
               className="px-6 py-3 bg-white text-blue-800 border-2 border-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors flex items-center justify-center"
             >
               <Phone className="h-5 w-5 mr-2" />
               Call (818) 806-9181
-            </a>
+            </button>
           </div>
         </div>
       </div>

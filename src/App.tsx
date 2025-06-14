@@ -133,6 +133,10 @@ function App() {
     );
   };
 
+  const handleContactClick = () => {
+    window.location.href = 'mailto:info@legacycapital.group';
+  };
+
   return (
     <div className="min-h-screen bg-gray-100">
       <Header />
@@ -153,7 +157,12 @@ function App() {
             <p className="mt-2">
               <a href="/terms" className="text-blue-800 hover:underline mx-2">Terms of Service</a>
               <a href="/privacy" className="text-blue-800 hover:underline mx-2">Privacy Policy</a>
-              <a href="mailto:info@legacycapital.group" className="text-blue-800 hover:underline mx-2">Contact Us</a>
+              <button 
+                onClick={handleContactClick}
+                className="text-blue-800 hover:underline mx-2 cursor-pointer"
+              >
+                Contact Us
+              </button>
             </p>
           </div>
         </div>
