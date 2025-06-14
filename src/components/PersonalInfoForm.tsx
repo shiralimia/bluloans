@@ -1,6 +1,6 @@
 import React from 'react';
 import { PersonalInfo } from '../types/loan';
-import { User, Mail, Phone, Calendar, Home } from 'lucide-react';
+import { User, Mail, Phone, Calendar, Home, CreditCard } from 'lucide-react';
 
 interface PersonalInfoFormProps {
   personalInfo: PersonalInfo;
@@ -24,6 +24,30 @@ const PersonalInfoForm: React.FC<PersonalInfoFormProps> = ({
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 
+  const formatSSN = (value: string) => {
+    // Remove all non-digits
+    const digits = value.replace(/\D/g, '');
+    
+    // Format as XXX-XX-XXXX
+    if (digits.length <= 3) {
+      return digits;
+    } else if (digits.length <= 5) {
+      return `${digits.slice(0, 3)}-${digits.slice(3)}`;
+    } else {
+      return `${digits.slice(0, 3)}-${digits.slice(3, 5)}-${digits.slice(5, 9)}`;
+    }
+  };
+
+  const handleSSNChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatSSN(e.target.value);
+    updatePersonalInfo('socialSecurityNumber', formatted);
+  };
+
+  const isSSNValid = (ssn: string) => {
+    const digits = ssn.replace(/\D/g, '');
+    return digits.length === 9;
+  };
+
   const isFormValid = () => {
     return (
       personalInfo.firstName.trim() !== '' &&
@@ -34,7 +58,8 @@ const PersonalInfoForm: React.FC<PersonalInfoFormProps> = ({
       personalInfo.address.trim() !== '' &&
       personalInfo.city.trim() !== '' &&
       personalInfo.state.trim() !== '' &&
-      personalInfo.zipCode.trim() !== ''
+      personalInfo.zipCode.trim() !== '' &&
+      isSSNValid(personalInfo.socialSecurityNumber)
     );
   };
 
@@ -150,6 +175,37 @@ const PersonalInfoForm: React.FC<PersonalInfoFormProps> = ({
             />
           </div>
         </div>
+      </div>
+
+      <div className="mb-6">
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          Social Security Number
+        </label>
+        <div className="relative">
+          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <CreditCard className="h-5 w-5 text-gray-400" />
+          </div>
+          <input
+            type="text"
+            name="socialSecurityNumber"
+            value={personalInfo.socialSecurityNumber}
+            onChange={handleSSNChange}
+            className={`block w-full pl-10 pr-3 py-2 border ${
+              personalInfo.socialSecurityNumber && !isSSNValid(personalInfo.socialSecurityNumber)
+                ? 'border-red-500 focus:ring-red-500 focus:border-red-500'
+                : 'border-gray-300 focus:ring-blue-800 focus:border-blue-800'
+            } rounded-md shadow-sm focus:outline-none`}
+            placeholder="XXX-XX-XXXX"
+            maxLength={11}
+            required
+          />
+          {personalInfo.socialSecurityNumber && !isSSNValid(personalInfo.socialSecurityNumber) && (
+            <p className="mt-1 text-sm text-red-500">Please enter a valid 9-digit Social Security Number</p>
+          )}
+        </div>
+        <p className="mt-1 text-xs text-gray-500">
+          Your SSN is required for identity verification and credit check purposes
+        </p>
       </div>
       
       <div className="mb-6">

@@ -8,6 +8,7 @@ export interface PersonalInfo {
   city: string;
   state: string;
   zipCode: string;
+  socialSecurityNumber: string;
 }
 
 export interface FinancialInfo {

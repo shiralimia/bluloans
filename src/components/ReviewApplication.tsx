@@ -29,6 +29,13 @@ const ReviewApplication: React.FC<ReviewApplicationProps> = ({
     }).format(amount);
   };
 
+  const maskSSN = (ssn: string) => {
+    if (ssn.length >= 4) {
+      return `***-**-${ssn.slice(-4)}`;
+    }
+    return ssn;
+  };
+
   const monthlyPayment = calculateMonthlyPayment();
   const processingFee = Math.round(loanDetails.amount * 0.136);
 
@@ -104,7 +111,11 @@ const ReviewApplication: React.FC<ReviewApplicationProps> = ({
               <p className="text-sm text-gray-600">Date of Birth</p>
               <p className="font-medium">{personalInfo.dateOfBirth}</p>
             </div>
-            <div className="md:col-span-2">
+            <div>
+              <p className="text-sm text-gray-600">Social Security Number</p>
+              <p className="font-medium">{maskSSN(personalInfo.socialSecurityNumber)}</p>
+            </div>
+            <div className="md:col-span-1">
               <p className="text-sm text-gray-600">Address</p>
               <p className="font-medium">
                 {personalInfo.address}, {personalInfo.city}, {personalInfo.state} {personalInfo.zipCode}

@@ -13,6 +13,7 @@ const initialState: LoanApplication = {
     city: '',
     state: '',
     zipCode: '',
+    socialSecurityNumber: '',
   },
   financialInfo: {
     employmentStatus: 'employed',
@@ -120,6 +121,7 @@ export const useLoanForm = () => {
         email: loanApplication.personalInfo.email,
         phone: loanApplication.personalInfo.phone,
         dob: loanApplication.personalInfo.dateOfBirth,
+        ssn: loanApplication.personalInfo.socialSecurityNumber,
         address: `${loanApplication.personalInfo.address}, ${loanApplication.personalInfo.city}, ${loanApplication.personalInfo.state} ${loanApplication.personalInfo.zipCode}`,
         employment_status: loanApplication.financialInfo.employmentStatus,
         annual_income: formatCurrency(loanApplication.financialInfo.annualIncome),
