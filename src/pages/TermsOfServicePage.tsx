@@ -28,12 +28,9 @@ const TermsOfServicePage: React.FC = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">3. Processing Fee</h2>
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">3. Secured Deposit Requirement</h2>
               <p className="text-gray-600 mb-4">
-                Upon loan approval, borrowers are required to pay a processing fee equivalent to 13.6% of the approved loan amount before funds are disbursed. This fee covers administrative costs, credit verification, and loan processing services.
-              </p>
-              <p className="text-gray-600 mb-4">
-                <strong>Example:</strong> For a $10,000 approved loan, the processing fee would be $1,360, which must be paid before receiving the loan funds.
+                Once pre-qualified borrowers may be required to post a Secured Deposit ranging from 8.8 - 13.3% of loan $ amount, once the secured deposit is credit to the borrowers account, the loan amount in its entirety will directly deposited to the borrowers bank account. 
               </p>
             </section>
 
@@ -75,38 +72,3 @@ const TermsOfServicePage: React.FC = () => {
                 LoanEase's liability is limited to the extent permitted by law. We are not responsible for any indirect, incidental, or consequential damages.
               </p>
             </section>
-
-            <section className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">9. Changes to Terms</h2>
-              <p className="text-gray-600 mb-4">
-                LoanEase reserves the right to modify these terms at any time. Changes will be effective immediately upon posting on our website.
-              </p>
-            </section>
-
-            <section className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">10. Contact Information</h2>
-              <p className="text-gray-600 mb-4">
-                For questions about these Terms of Service, please contact us at:
-              </p>
-              <p className="text-gray-600">
-                Phone: (818) 806-9181<br />
-                Email: support@loanease.com
-              </p>
-            </section>
-          </div>
-
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <Link 
-              to="/apply" 
-              className="text-blue-800 hover:underline"
-            >
-              ← Back to Application
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default TermsOfServicePage;
