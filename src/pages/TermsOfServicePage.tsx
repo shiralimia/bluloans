@@ -32,6 +32,7 @@ const TermsOfServicePage: React.FC = () => {
               <p className="text-gray-600 mb-4">
                 Once pre-qualified borrowers may be required to post a Secured Deposit ranging from 8.8 - 13.3% of loan $ amount, once the secured deposit is credit to the borrowers account, the loan amount in its entirety will directly deposited to the borrowers bank account. 
               </p>
+
             </section>
 
             <section className="mb-8">
