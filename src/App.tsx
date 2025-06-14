@@ -112,13 +112,13 @@ function App() {
 
   const renderApplicationContent = () => {
     return (
-      <main className="container mx-auto px-4 py-12 max-w-4xl">
+      <main className="container mx-auto px-4 py-6 sm:py-8 md:py-12 max-w-4xl">
         {currentStep !== 'confirmation' && (
-          <div className="mb-8">
-            <h1 className="text-3xl font-bold text-center text-gray-800 mb-2">
+          <div className="mb-6 sm:mb-8">
+            <h1 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-2">
               Apply for a Personal Loan
             </h1>
-            <p className="text-center text-gray-600">
+            <p className="text-center text-gray-600 text-sm sm:text-base px-4">
               Complete the form below to get pre-qualified with no impact to your credit score
             </p>
           </div>
@@ -150,16 +150,16 @@ function App() {
         <Route path="/apply" element={renderApplicationContent()} />
       </Routes>
       
-      <footer className="bg-white py-6 mt-12">
+      <footer className="bg-white py-4 sm:py-6 mt-8 sm:mt-12">
         <div className="container mx-auto px-4">
-          <div className="text-center text-gray-600 text-sm">
+          <div className="text-center text-gray-600 text-xs sm:text-sm">
             <p>© 2025 Legacy Capital. All rights reserved.</p>
-            <p className="mt-2">
-              <a href="/terms" className="text-blue-800 hover:underline mx-2">Terms of Service</a>
-              <a href="/privacy" className="text-blue-800 hover:underline mx-2">Privacy Policy</a>
+            <p className="mt-2 flex flex-wrap justify-center gap-2 sm:gap-4">
+              <a href="/terms" className="text-blue-800 hover:underline">Terms of Service</a>
+              <a href="/privacy" className="text-blue-800 hover:underline">Privacy Policy</a>
               <button 
                 onClick={handleContactClick}
-                className="text-blue-800 hover:underline mx-2 cursor-pointer"
+                className="text-blue-800 hover:underline cursor-pointer"
               >
                 Contact Us
               </button>

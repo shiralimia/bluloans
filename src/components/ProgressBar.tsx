@@ -22,7 +22,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ currentStep }) => {
   const progressPercentage = (currentStepIndex / (steps.length - 1)) * 100;
 
   return (
-    <div className="mb-8">
+    <div className="mb-6 sm:mb-8">
       <div className="relative pt-1">
         <div className="flex items-center justify-between mb-2">
           {steps.map((step, index) => (
@@ -30,7 +30,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ currentStep }) => {
               key={step.id} 
               className={`flex-1 text-center ${index <= currentStepIndex ? 'text-blue-800' : 'text-gray-400'}`}
             >
-              <span className="text-sm">{step.label}</span>
+              <span className="text-xs sm:text-sm">{step.label}</span>
             </div>
           ))}
         </div>

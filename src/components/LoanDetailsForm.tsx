@@ -53,9 +53,9 @@ const LoanDetailsForm: React.FC<LoanDetailsFormProps> = ({
   const isFormValid = loanDetails.purpose && loanDetails.amount >= 1000 && loanDetails.amount <= 50000;
 
   return (
-    <div className="bg-white p-8 rounded-xl shadow-lg transition-all duration-300">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">Tell us about your loan</h2>
-      <div className="mb-8">
+    <div className="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-lg transition-all duration-300">
+      <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">Tell us about your loan</h2>
+      <div className="mb-6 sm:mb-8">
         <label className="block text-sm font-medium text-gray-700 mb-2">
           How much would you like to borrow?
         </label>
@@ -76,19 +76,19 @@ const LoanDetailsForm: React.FC<LoanDetailsFormProps> = ({
             type="number"
             value={loanDetails.amount}
             onChange={handleAmountChange}
-            className="mt-2 block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800"
+            className="mt-2 block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800 text-sm sm:text-base"
             placeholder="Loan amount"
             min="1000"
             max="50000"
           />
         </div>
-        <div className="flex justify-between text-sm text-gray-600 mt-1">
+        <div className="flex justify-between text-xs sm:text-sm text-gray-600 mt-1">
           <span>$1,000</span>
           <span>$50,000</span>
         </div>
       </div>
 
-      <div className="mb-8">
+      <div className="mb-6 sm:mb-8">
         <label className="block text-sm font-medium text-gray-700 mb-2">
           Loan term (months)
         </label>
@@ -99,7 +99,7 @@ const LoanDetailsForm: React.FC<LoanDetailsFormProps> = ({
           <select
             value={loanDetails.term}
             onChange={handleTermChange}
-            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800 appearance-none bg-white"
+            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800 appearance-none bg-white text-sm sm:text-base"
           >
             <option value={12}>12 months (1 year)</option>
             <option value={24}>24 months (2 years)</option>
@@ -110,7 +110,7 @@ const LoanDetailsForm: React.FC<LoanDetailsFormProps> = ({
         </div>
       </div>
 
-      <div className="mb-8">
+      <div className="mb-6 sm:mb-8">
         <label className="block text-sm font-medium text-gray-700 mb-2">
           Purpose of loan
         </label>
@@ -121,7 +121,7 @@ const LoanDetailsForm: React.FC<LoanDetailsFormProps> = ({
           <select
             value={loanDetails.purpose}
             onChange={handlePurposeChange}
-            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800 appearance-none bg-white"
+            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-800 focus:border-blue-800 appearance-none bg-white text-sm sm:text-base"
           >
             <option value="">Select a purpose</option>
             {loanPurposes.map((purpose) => (
@@ -133,13 +133,13 @@ const LoanDetailsForm: React.FC<LoanDetailsFormProps> = ({
         </div>
       </div>
 
-      <div className="bg-gray-50 p-4 rounded-lg mb-8">
-        <h3 className="text-lg font-medium text-gray-800 mb-2">Estimated monthly payment</h3>
+      <div className="bg-gray-50 p-3 sm:p-4 rounded-lg mb-6 sm:mb-8">
+        <h3 className="text-base sm:text-lg font-medium text-gray-800 mb-2">Estimated monthly payment</h3>
         <div className="flex items-baseline">
-          <span className="text-3xl font-bold text-blue-800">{formatCurrency(monthlyPayment)}</span>
-          <span className="text-gray-600 ml-2">/ month</span>
+          <span className="text-2xl sm:text-3xl font-bold text-blue-800">{formatCurrency(monthlyPayment)}</span>
+          <span className="text-gray-600 ml-2 text-sm sm:text-base">/ month</span>
         </div>
-        <p className="text-sm text-gray-600 mt-1">
+        <p className="text-xs sm:text-sm text-gray-600 mt-1">
           Based on a {loanDetails.term}-month term at 5.99% APR
         </p>
       </div>
@@ -148,7 +148,7 @@ const LoanDetailsForm: React.FC<LoanDetailsFormProps> = ({
         <button
           onClick={onNext}
           disabled={!isFormValid}
-          className={`px-6 py-2 rounded-md text-white font-medium transition-colors ${
+          className={`px-4 sm:px-6 py-2 rounded-md text-white font-medium transition-colors text-sm sm:text-base ${
             isFormValid 
               ? 'bg-blue-800 hover:bg-blue-700' 
               : 'bg-gray-300 cursor-not-allowed'

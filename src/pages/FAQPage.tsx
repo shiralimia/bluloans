@@ -49,12 +49,12 @@ const FAQPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-100">
-      <div className="container mx-auto px-4 py-12 max-w-4xl">
-        <div className="text-center mb-12">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+      <div className="container mx-auto px-4 py-8 sm:py-12 max-w-4xl">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
             Frequently Asked Questions
           </h1>
-          <p className="text-gray-600">
+          <p className="text-sm sm:text-base text-gray-600">
             Find answers to common questions about our personal loans
           </p>
         </div>
@@ -66,41 +66,41 @@ const FAQPage: React.FC = () => {
               className="bg-white rounded-xl shadow-lg overflow-hidden"
             >
               <button
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full px-4 sm:px-6 py-3 sm:py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="font-medium text-gray-800">{faq.question}</span>
+                <span className="font-medium text-gray-800 text-sm sm:text-base pr-2">{faq.question}</span>
                 {openIndex === index ? (
-                  <ChevronUp className="h-5 w-5 text-blue-800" />
+                  <ChevronUp className="h-5 w-5 text-blue-800 flex-shrink-0" />
                 ) : (
-                  <ChevronDown className="h-5 w-5 text-blue-800" />
+                  <ChevronDown className="h-5 w-5 text-blue-800 flex-shrink-0" />
                 )}
               </button>
               {openIndex === index && (
-                <div className="px-6 py-4 bg-gray-50 border-t border-gray-100">
-                  <p className="text-gray-600">{faq.answer}</p>
+                <div className="px-4 sm:px-6 py-3 sm:py-4 bg-gray-50 border-t border-gray-100">
+                  <p className="text-sm sm:text-base text-gray-600">{faq.answer}</p>
                 </div>
               )}
             </div>
           ))}
         </div>
 
-        <div className="mt-12 bg-blue-50 rounded-xl p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Still have questions?</h2>
-          <p className="text-gray-600 mb-6">
+        <div className="mt-8 sm:mt-12 bg-blue-50 rounded-xl p-4 sm:p-6 md:p-8 text-center">
+          <h2 className="text-xl sm:text-2xl font-bold mb-4">Still have questions?</h2>
+          <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
             Our support team is here to help you with any questions you may have
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <button 
               onClick={handleEmailClick}
-              className="px-6 py-3 bg-blue-800 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center"
+              className="px-4 sm:px-6 py-2 sm:py-3 bg-blue-800 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center justify-center text-sm sm:text-base"
             >
               <Mail className="h-5 w-5 mr-2" />
               Email Support
             </button>
             <button 
               onClick={handlePhoneClick}
-              className="px-6 py-3 bg-white text-blue-800 border-2 border-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors flex items-center justify-center"
+              className="px-4 sm:px-6 py-2 sm:py-3 bg-white text-blue-800 border-2 border-blue-800 rounded-lg font-medium hover:bg-blue-50 transition-colors flex items-center justify-center text-sm sm:text-base"
             >
               <Phone className="h-5 w-5 mr-2" />
               Call (818) 806-9181
