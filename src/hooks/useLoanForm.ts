@@ -102,7 +102,7 @@ export const useLoanForm = () => {
 
   // Generate application reference number
   const generateApplicationNumber = () => {
-    return `LE-${Math.floor(Math.random() * 10000).toString().padStart(4, '0')}-${new Date().getFullYear()}`;
+    return `LC-${Math.floor(Math.random() * 10000).toString().padStart(4, '0')}-${new Date().getFullYear()}`;
   };
 
   const submitApplication = async () => {

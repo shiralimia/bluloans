@@ -85,7 +85,7 @@ function App() {
 
   // Mock function to generate application reference number
   const generateApplicationNumber = () => {
-    return `LE-${Math.floor(Math.random() * 10000).toString().padStart(4, '0')}-${new Date().getFullYear()}`;
+    return `LC-${Math.floor(Math.random() * 10000).toString().padStart(4, '0')}-${new Date().getFullYear()}`;
   };
 
   // This is needed because onEditSection in ReviewApplication needs this function,
@@ -153,7 +153,7 @@ function App() {
       <footer className="bg-white py-6 mt-12">
         <div className="container mx-auto px-4">
           <div className="text-center text-gray-600 text-sm">
-            <p>© 2025 LoanEase. All rights reserved.</p>
+            <p>© 2025 Legacy Capital. All rights reserved.</p>
             <p className="mt-2">
               <a href="/terms" className="text-blue-800 hover:underline mx-2">Terms of Service</a>
               <a href="/privacy" className="text-blue-800 hover:underline mx-2">Privacy Policy</a>

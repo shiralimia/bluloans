@@ -1,5 +1,4 @@
 import React from 'react';
-import { DollarSign } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header: React.FC = () => {
@@ -9,13 +8,17 @@ const Header: React.FC = () => {
     <header className="py-4 md:py-6 bg-white shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-blue-800 text-white p-1.5 md:p-2 rounded-lg">
-              <DollarSign className="h-5 w-5 md:h-6 md:w-6" />
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="flex-shrink-0">
+              <img 
+                src="/legacycapital640.jpg" 
+                alt="Legacy Capital" 
+                className="h-12 w-12 md:h-14 md:w-14 rounded-lg object-cover"
+              />
             </div>
             <div>
-              <h1 className="text-lg md:text-xl font-bold text-blue-800">LoanEase</h1>
-              <p className="text-xs md:text-sm text-gray-600">Simple. Fast. Reliable.</p>
+              <h1 className="text-lg md:text-xl font-bold text-gray-800">Legacy Capital</h1>
+              <p className="text-xs md:text-sm text-gray-600">Your Financial Partner</p>
             </div>
           </Link>
           <nav>
