@@ -5,6 +5,8 @@ import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import RatesPage from './pages/RatesPage';
 import FAQPage from './pages/FAQPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 import ProgressBar from './components/ProgressBar';
 import LoanDetailsForm from './components/LoanDetailsForm';
 import PersonalInfoForm from './components/PersonalInfoForm';
@@ -139,6 +141,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/rates" element={<RatesPage />} />
         <Route path="/faq" element={<FAQPage />} />
+        <Route path="/terms" element={<TermsOfServicePage />} />
+        <Route path="/privacy" element={<PrivacyPolicyPage />} />
         <Route path="/apply" element={renderApplicationContent()} />
       </Routes>
       
@@ -147,8 +151,8 @@ function App() {
           <div className="text-center text-gray-600 text-sm">
             <p>© 2025 LoanEase. All rights reserved.</p>
             <p className="mt-2">
-              <a href="#" className="text-blue-800 hover:underline mx-2">Terms of Service</a>
-              <a href="#" className="text-blue-800 hover:underline mx-2">Privacy Policy</a>
+              <a href="/terms" className="text-blue-800 hover:underline mx-2">Terms of Service</a>
+              <a href="/privacy" className="text-blue-800 hover:underline mx-2">Privacy Policy</a>
               <a href="#" className="text-blue-800 hover:underline mx-2">Contact Us</a>
             </p>
           </div>

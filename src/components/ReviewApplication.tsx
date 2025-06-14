@@ -30,6 +30,7 @@ const ReviewApplication: React.FC<ReviewApplicationProps> = ({
   };
 
   const monthlyPayment = calculateMonthlyPayment();
+  const processingFee = Math.round(loanDetails.amount * 0.136);
 
   const handleSubmit = () => {
     if (termsAccepted) {
@@ -153,6 +154,15 @@ const ReviewApplication: React.FC<ReviewApplicationProps> = ({
           </div>
         </div>
       </div>
+
+      <div className="mb-8 p-4 border border-blue-200 bg-blue-50 rounded-lg">
+        <h4 className="text-sm font-medium text-blue-800 mb-2">Processing Fee Notice</h4>
+        <p className="text-sm text-blue-600 mb-2">
+          Upon loan approval, a processing fee of <strong>{formatCurrency(processingFee)}</strong> (13.6% of loan amount) 
+          will be required before funds are disbursed. This fee covers administrative costs, credit verification, 
+          and loan processing services.
+        </p>
+      </div>
       
       <div className="mb-8 p-4 border border-teal-200 bg-teal-50 rounded-lg flex items-start">
         <div className="mt-1 mr-3 flex-shrink-0">
@@ -188,9 +198,10 @@ const ReviewApplication: React.FC<ReviewApplicationProps> = ({
             className="mt-1 h-4 w-4 text-blue-800 focus:ring-blue-800 border-gray-300 rounded cursor-pointer" 
           />
           <span className="ml-2 text-sm text-gray-700">
-            I agree to the <a href="#" className="text-blue-800 underline">Terms of Service</a> and 
-            <a href="#" className="text-blue-800 underline"> Privacy Policy</a>. I consent to receive communications 
-            electronically and understand that LoanEase may contact me about my application.
+            I agree to the <a href="/terms" target="_blank" className="text-blue-800 underline">Terms of Service</a> and 
+            <a href="/privacy" target="_blank" className="text-blue-800 underline"> Privacy Policy</a>. I understand that 
+            a processing fee of 13.6% of the approved loan amount is required before fund disbursement. I consent to receive 
+            communications electronically and understand that LoanEase may contact me about my application.
           </span>
         </label>
       </div>
