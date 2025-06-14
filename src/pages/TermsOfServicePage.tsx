@@ -83,7 +83,7 @@ const TermsOfServicePage: React.FC = () => {
             <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">10. Contact Information</h2>
               <p className="text-gray-600 mb-4">
-                If you have any questions about these Terms of Service, please contact us at support@loanease.com.
+                If you have any questions about these Terms of Service, please contact us at info@legacycapital.group.
               </p>
             </section>
           </div>
