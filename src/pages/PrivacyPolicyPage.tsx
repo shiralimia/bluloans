@@ -114,11 +114,11 @@ const PrivacyPolicyPage: React.FC = () => {
                   (818) 806-9181
                 </a>
                 <a 
-                  href="mailto:info@legacycapital.group"
+                  href="mailto:info@bluloans.com"
                   className="flex items-center text-blue-800 hover:text-blue-600 transition-colors"
                 >
                   <Mail className="h-5 w-5 mr-2" />
-                  info@legacycapital.group
+                  info@bluloans.com
                 </a>
               </div>
             </section>

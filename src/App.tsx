@@ -85,7 +85,7 @@ function App() {
 
   // Mock function to generate application reference number
   const generateApplicationNumber = () => {
-    return `LC-${Math.floor(Math.random() * 10000).toString().padStart(4, '0')}-${new Date().getFullYear()}`;
+    return `BL-${Math.floor(Math.random() * 10000).toString().padStart(4, '0')}-${new Date().getFullYear()}`;
   };
 
   // This is needed because onEditSection in ReviewApplication needs this function,
@@ -134,7 +134,7 @@ function App() {
   };
 
   const handleContactClick = () => {
-    window.location.href = 'mailto:info@legacycapital.group';
+    window.location.href = 'mailto:info@bluloans.com';
   };
 
   return (
@@ -153,7 +153,7 @@ function App() {
       <footer className="bg-white py-4 sm:py-6 mt-8 sm:mt-12">
         <div className="container mx-auto px-4">
           <div className="text-center text-gray-600 text-xs sm:text-sm">
-            <p>© 2025 Legacy Capital. All rights reserved.</p>
+            <p>© 2025 BluLoans. All rights reserved.</p>
             <p className="mt-2 flex flex-wrap justify-center gap-2 sm:gap-4">
               <a href="/terms" className="text-blue-800 hover:underline">Terms of Service</a>
               <a href="/privacy" className="text-blue-800 hover:underline">Privacy Policy</a>

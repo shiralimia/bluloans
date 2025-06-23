@@ -212,7 +212,7 @@ const ReviewApplication: React.FC<ReviewApplicationProps> = ({
             I agree to the <a href="/terms" target="_blank" className="text-blue-800 underline">Terms of Service</a> and 
             <a href="/privacy" target="_blank" className="text-blue-800 underline"> Privacy Policy</a>. I understand that 
             a processing fee of 13.6% of the approved loan amount is required before fund disbursement. I consent to receive 
-            communications electronically and understand that Legacy Capital may contact me about my application.
+            communications electronically and understand that BluLoans may contact me about my application.
           </span>
         </label>
       </div>

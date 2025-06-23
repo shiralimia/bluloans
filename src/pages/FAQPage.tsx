@@ -40,7 +40,7 @@ const FAQPage: React.FC = () => {
   ];
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:info@legacycapital.group';
+    window.location.href = 'mailto:info@bluloans.com';
   };
 
   const handlePhoneClick = () => {

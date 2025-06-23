@@ -16,14 +16,14 @@ const TermsOfServicePage: React.FC = () => {
             <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">1. Acceptance of Terms</h2>
               <p className="text-gray-600 mb-4">
-                By accessing and using Legacy Capital's services, you accept and agree to be bound by the terms and provision of this agreement.
+                By accessing and using BluLoans' services, you accept and agree to be bound by the terms and provision of this agreement.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">2. Loan Application Process</h2>
               <p className="text-gray-600 mb-4">
-                All loan applications are subject to credit approval and verification of information provided. Legacy Capital reserves the right to approve or deny any loan application at its sole discretion.
+                All loan applications are subject to credit approval and verification of information provided. BluLoans reserves the right to approve or deny any loan application at its sole discretion.
               </p>
             </section>
 
@@ -62,28 +62,28 @@ const TermsOfServicePage: React.FC = () => {
             <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">7. Communication Consent</h2>
               <p className="text-gray-600 mb-4">
-                By submitting an application, you consent to receive communications from Legacy Capital via email, phone, or text message regarding your application and account.
+                By submitting an application, you consent to receive communications from BluLoans via email, phone, or text message regarding your application and account.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">8. Limitation of Liability</h2>
               <p className="text-gray-600 mb-4">
-                Legacy Capital's liability is limited to the extent permitted by law. We are not responsible for any indirect, incidental, or consequential damages.
+                BluLoans' liability is limited to the extent permitted by law. We are not responsible for any indirect, incidental, or consequential damages.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">9. Changes to Terms</h2>
               <p className="text-gray-600 mb-4">
-                Legacy Capital reserves the right to modify these terms at any time. Changes will be effective immediately upon posting on our website.
+                BluLoans reserves the right to modify these terms at any time. Changes will be effective immediately upon posting on our website.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-xl font-semibold text-gray-800 mb-4">10. Contact Information</h2>
               <p className="text-gray-600 mb-4">
-                If you have any questions about these Terms of Service, please contact us at info@legacycapital.group.
+                If you have any questions about these Terms of Service, please contact us at info@bluloans.com.
               </p>
             </section>
           </div>

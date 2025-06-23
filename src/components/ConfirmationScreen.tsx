@@ -28,7 +28,7 @@ const ConfirmationScreen: React.FC<ConfirmationScreenProps> = ({ applicationNumb
       </h2>
       
       <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
-        Thank you for applying for a loan with Legacy Capital. Your application has been received and is now being processed.
+        Thank you for applying for a loan with BluLoans. Your application has been received and is now being processed.
       </p>
       
       <div className="bg-blue-50 p-3 sm:p-4 rounded-lg mb-4 sm:mb-6">
