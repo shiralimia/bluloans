@@ -36,23 +36,47 @@ const TermsOfServicePage: React.FC = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">3. Processing Fee</h2>
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">3. Secure Deposit Requirement</h2>
               <p className="text-gray-600 mb-4">
-                Upon loan approval, borrowers are required to pay a processing fee equal to 13.6% of the approved loan amount before funds are disbursed. This fee covers:
+                Upon loan approval, borrowers are required to make a secure deposit ranging from 6.8% to 13.6% of the approved loan amount before the full loan funds are disbursed. The exact percentage is determined based on:
+              </p>
+              <ul className="list-disc list-inside text-gray-600 mb-4 space-y-2">
+                <li>Credit score and creditworthiness assessment</li>
+                <li>Loan amount and repayment term</li>
+                <li>Income verification and debt-to-income ratio</li>
+                <li>Employment history and stability</li>
+                <li>Overall risk assessment profile</li>
+              </ul>
+              <p className="text-gray-600 mb-4">
+                <strong>Important:</strong> Once the secure deposit is credited to your account, the full loan amount will be directly deposited into your designated bank account. The secure deposit serves as collateral and helps ensure loan repayment compliance.
+              </p>
+              <div className="bg-blue-50 p-4 rounded-lg mb-4">
+                <h4 className="font-semibold text-blue-800 mb-2">Secure Deposit Process:</h4>
+                <ol className="list-decimal list-inside text-blue-700 space-y-1">
+                  <li>Loan application approved and terms finalized</li>
+                  <li>Secure deposit percentage determined (6.8% - 13.6%)</li>
+                  <li>Borrower makes secure deposit payment</li>
+                  <li>Deposit is credited to borrower's loan account</li>
+                  <li>Full loan amount is disbursed to borrower's bank account</li>
+                </ol>
+              </div>
+            </section>
+
+            <section className="mb-8">
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">4. Processing and Administrative Fees</h2>
+              <p className="text-gray-600 mb-4">
+                In addition to the secure deposit, standard processing fees may apply to cover:
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-4 space-y-2">
                 <li>Administrative costs and loan processing</li>
                 <li>Credit verification and underwriting services</li>
                 <li>Document preparation and legal compliance</li>
                 <li>Risk assessment and fraud prevention measures</li>
-              </ul>
-              <p className="text-gray-600 mb-4">
-                The processing fee is non-refundable once paid and loan funds are disbursed.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">4. Eligibility Requirements</h2>
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">5. Eligibility Requirements</h2>
               <p className="text-gray-600 mb-4">To qualify for a loan through BluLoans, you must meet the following criteria:</p>
               <ul className="list-disc list-inside text-gray-600 mb-4 space-y-2">
                 <li>Be at least 18 years of age</li>
@@ -66,7 +90,7 @@ const TermsOfServicePage: React.FC = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">5. Loan Terms and Repayment</h2>
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">6. Loan Terms and Repayment</h2>
               <p className="text-gray-600 mb-4">
                 Loan repayment terms range from 12 to 60 months with fixed monthly payments. Interest rates range from 5.99% to 35.99% APR based on creditworthiness and other factors.
               </p>
@@ -79,7 +103,7 @@ const TermsOfServicePage: React.FC = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">6. Interest Rates and Fees</h2>
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">7. Interest Rates and Fees</h2>
               <p className="text-gray-600 mb-4">Interest rates and fees are determined based on:</p>
               <ul className="list-disc list-inside text-gray-600 mb-4 space-y-2">
                 <li>Credit score and credit history</li>
@@ -93,14 +117,14 @@ const TermsOfServicePage: React.FC = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">7. Privacy and Data Protection</h2>
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">8. Privacy and Data Protection</h2>
               <p className="text-gray-600 mb-4">
                 Your personal and financial information is protected according to our Privacy Policy. We use industry-standard security measures to protect your data and comply with all applicable privacy laws.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">8. Communication Consent</h2>
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">9. Communication Consent</h2>
               <p className="text-gray-600 mb-4">
                 By submitting an application, you consent to receive communications from BluLoans via:
               </p>
@@ -113,7 +137,7 @@ const TermsOfServicePage: React.FC = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">9. Default and Collections</h2>
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">10. Default and Collections</h2>
               <p className="text-gray-600 mb-4">
                 In the event of default, BluLoans may pursue collection activities including but not limited to:
               </p>
@@ -126,28 +150,28 @@ const TermsOfServicePage: React.FC = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">10. Limitation of Liability</h2>
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">11. Limitation of Liability</h2>
               <p className="text-gray-600 mb-4">
                 BluLoans' liability is limited to the extent permitted by law. We are not responsible for any indirect, incidental, or consequential damages arising from the use of our services.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">11. Changes to Terms</h2>
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">12. Changes to Terms</h2>
               <p className="text-gray-600 mb-4">
                 BluLoans reserves the right to modify these terms at any time. Material changes will be communicated to borrowers via email or postal mail. Continued use of our services constitutes acceptance of modified terms.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">12. Governing Law</h2>
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">13. Governing Law</h2>
               <p className="text-gray-600 mb-4">
                 These terms are governed by the laws of the State of California and federal laws of the United States. Any disputes will be resolved through binding arbitration.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">13. Contact Information</h2>
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">14. Contact Information</h2>
               <p className="text-gray-600 mb-4">
                 If you have any questions about these Terms of Service, please contact us:
               </p>
