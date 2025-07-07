@@ -72,7 +72,7 @@ const TermsOfServicePage: React.FC = () => {
                 <li>Credit verification and underwriting services</li>
                 <li>Document preparation and legal compliance</li>
                 <li>Risk assessment and fraud prevention measures</li>
-              </p>
+              </ul>
             </section>
 
             <section className="mb-8">
